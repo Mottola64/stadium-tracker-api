@@ -4,7 +4,7 @@ class CreateStadia < ActiveRecord::Migration[6.0]
       t.string :name
       t.string :city
       t.string :team
-
+      t.integer :user_id
       t.timestamps
     end
   end
