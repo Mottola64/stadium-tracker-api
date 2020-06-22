@@ -3,5 +3,13 @@ Rails.application.routes.draw do
   delete '/logout', to: 'sessions#destroy'
   get '/logged_in', to: 'sessions#is_logged_in?'
   
+  
   resources :users, only: [:create, :show, :index]
+  namespace :api do
+    namespace :v1 do
+      resources :stadia
+      resources :teams
+    end
+  end
+  
 end
